@@ -1,0 +1,180 @@
+.collections {
+    margin-bottom: 20px;
+}
+.collections__wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+
+
+.collections-tile {
+    min-height: 180px;
+}
+.collections-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 12px;
+    background: var(--brand);
+    overflow: hidden;
+}
+.collections-card__type {
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--gray-2);
+    margin-bottom: 4px;
+}
+.collections-card__name {
+    max-width: 60%;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--white);
+}
+.collections-card__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+}
+
+.collections__more {
+    position: absolute;
+    top: 101%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.collections-card__center {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.collections__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 140%;
+    color: var(--brand);
+    margin-bottom: 20px;
+}
+.collections__more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 28px;
+    background: var(--brand);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white);
+    transition: background .3s;
+}
+.collections__more:hover {
+    background: #000000;
+}
+@media (max-width: 743px) {
+    .collections-tile6 {
+        min-height: 80px;
+        /* order: -3; */
+    }
+}
+@media (min-width: 1200px) {
+    .collections__wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 178px 135px 178px;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+    .collections-tile1 { grid-area: 1 / 1 / 2 / 2; }
+    .collections-tile2 { grid-area: 1 / 2 / 2 / 3; }
+    .collections-tile3 { grid-area: 1 / 3 / 2 / 4; }
+    .collections-tile4 { grid-area: 1 / 4 / 3 / 5; }
+    .collections-tile5 { grid-area: 2 / 1 / 4 / 2; }
+    .collections-tile6 { grid-area: 2 / 2 / 3 / 4; }
+    .collections-tile7 { grid-area: 3 / 2 / 4 / 3; }
+    .collections-tile8 { grid-area: 3 / 3 / 4 / 4; }
+    .collections-tile9 { grid-area: 3 / 4 / 4 / 5; }
+    .collections-tile4 .collections-card__img, .collections-tile5 .collections-card__img {
+        height: 80%;
+    }
+    .collections-tile6 {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        min-height: 135px;
+    }
+    .collections__more {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        padding: 13px 16px;
+    }
+}
+
+@media (min-width: 744px) and (max-width: 1199px)  {
+
+    .collections__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .collections-tile1 { grid-area: 1 / 1 / 2 / 2; }
+    .collections-tile2 { grid-area: 1 / 2 / 2 / 3; }
+    .collections-tile3 { grid-area: 1 / 3 / 2 / 4; }
+    .collections-tile4 { grid-area: 2 / 1 / 3 / 2; }
+    .collections-tile5 { grid-area: 2 / 3 / 3 / 4; }
+    .collections-tile6 {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .collections-tile7 { grid-area: 3 / 1 / 4 / 2; }
+    .collections-tile8 { grid-area: 3 / 2 / 4 / 3; }
+    .collections-tile9 { grid-area: 3 / 3 / 4 / 4; }
+    .collections__more {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        padding: 16px 20px;
+    }
+    .collections__title {
+        font-size: 30px;
+        line-height: 140%;
+        text-align: center;
+        max-width: 210px;
+    }
+    .collections-tile {
+        min-height: 257px;
+    }
+    .collections-card__img {
+        height: 72%;
+    }
+    .collections-card__name {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 140%;
+    }
+}
